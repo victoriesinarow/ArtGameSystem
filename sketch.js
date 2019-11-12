@@ -6,7 +6,7 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor();
-  createSprite(400, 0);
+  createSprite(0,0,10,5);
 }
 
 function draw() {
