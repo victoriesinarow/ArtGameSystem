@@ -6,13 +6,13 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor();
-  drawSprites();
   createSprite(10,400);
 }
 
 function draw() {
   background(50);
   rect(mouseX, mouseY, 100, 100);
+  drawSprites();
 }
 
 function mousePressed() {
