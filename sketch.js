@@ -21,7 +21,7 @@ function draw() {
   //the positions will be updated automatically at every cycle
   drawSprites();
   var leftWall = createSprite(0, 400, 20, 800);
-  var rightWall = createSprite(800, 400, 10, 800);
+  var rightWall = createSprite(795, 400, 10, 800);
   var topWall = createSprite(0, 20, 800, 20);
   var bottomWall = createSprite(380, 20, 800, 400)
 }
