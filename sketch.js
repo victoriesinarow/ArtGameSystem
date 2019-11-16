@@ -42,4 +42,3 @@ function mousePressed() {
   s.velocity.x = random(-5, 5);
   s.velocity.y = random(-5, 5);
 }
-
