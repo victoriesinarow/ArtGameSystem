@@ -60,7 +60,25 @@ function mousePressed() {
   s.velocity.y = random(-5, 5);
 }
 
+//튕기기
+function bounce() {
+    if(s.position.x<leftWall) {
+      s.position.x = 1;
+      s.velocity.x = abs(s.velocity.x);
+    }
 
-//function bounce() {
-//    if 
-//}
+    if(s.position.x>rightWall) {
+      s.position.x = width-1;
+      s.velocity.x = -abs(s.velocity.x);
+    }
+
+    if(s.position.y<leftWall) {
+      s.position.y = 1;
+      s.velocity.y = abs(s.velocity.y);
+    }
+
+    if(s.position.y>height) {
+      s.position.y = height-1;
+      s.velocity.y = -abs(s.velocity.y);
+    }
+}
