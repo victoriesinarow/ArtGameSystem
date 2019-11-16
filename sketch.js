@@ -18,10 +18,10 @@ function setup() {
 function draw() {
   background(0);
 
-  fill(0);
+  fill(255);
   textAlign(CENTER);
   text('Click to create a new sprite, move mouse to hit the wall', width/2, height/2);
-  fill(255);
+//  fill(255);
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
   drawSprites();
