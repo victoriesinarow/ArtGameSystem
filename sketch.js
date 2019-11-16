@@ -35,6 +35,25 @@ function draw() {
   text('Click to create a new sprite, move mouse to hit the wall', width/2, height/2);
 //  fill(255);
     
+  if(s.position.x<leftWall) {
+    s.position.x = 1;
+    s.velocity.x = abs(s.velocity.x);
+  }
+
+  if(s.position.x>rightWall) {
+    s.position.x = width-1;
+    s.velocity.x = -abs(s.velocity.x);
+  }
+
+  if(s.position.y<leftWall) {
+    s.position.y = 1;
+    s.velocity.y = abs(s.velocity.y);
+  }
+
+  if(s.position.y>height) {
+    s.position.y = height-1;
+    s.velocity.y = -abs(s.velocity.y);
+  }
   
     
 //    var leftWall = createSprite(0, 400, 20, 800);
@@ -62,23 +81,23 @@ function mousePressed() {
 
 //튕기기
 function bounce() {
-    if(s.position.x<leftWall) {
-      s.position.x = 1;
-      s.velocity.x = abs(s.velocity.x);
-    }
-
-    if(s.position.x>rightWall) {
-      s.position.x = width-1;
-      s.velocity.x = -abs(s.velocity.x);
-    }
-
-    if(s.position.y<leftWall) {
-      s.position.y = 1;
-      s.velocity.y = abs(s.velocity.y);
-    }
-
-    if(s.position.y>height) {
-      s.position.y = height-1;
-      s.velocity.y = -abs(s.velocity.y);
-    }
+//    if(s.position.x<leftWall) {
+//      s.position.x = 1;
+//      s.velocity.x = abs(s.velocity.x);
+//    }
+//
+//    if(s.position.x>rightWall) {
+//      s.position.x = width-1;
+//      s.velocity.x = -abs(s.velocity.x);
+//    }
+//
+//    if(s.position.y<leftWall) {
+//      s.position.y = 1;
+//      s.velocity.y = abs(s.velocity.y);
+//    }
+//
+//    if(s.position.y>height) {
+//      s.position.y = height-1;
+//      s.velocity.y = -abs(s.velocity.y);
+//    }
 }
