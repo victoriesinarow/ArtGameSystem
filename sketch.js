@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  background(random(), random(), random());
+  background(255);
 
   fill(0);
   textAlign(CENTER);
@@ -21,7 +21,7 @@ function draw() {
   //the positions will be updated automatically at every cycle
   drawSprites();
   var leftWall = createSprite(0, 400, 20, 800);
-  var rightWall = createSprite(780, 400, 20, 800);
+  var rightWall = createSprite(790, 400, 20, 800);
   var topWall = createSprite(0, 20, 800, 400);
   var bottomWall = createSprite(380, 20, 800, 400)
 }
