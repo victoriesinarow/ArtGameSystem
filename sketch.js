@@ -5,11 +5,15 @@ let canvas;
 let canvasWidth = 800;
 let canvasHeight = 400;
 
+
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor(); // no show cursor
 }
+
+
 
 function draw() {
   background(0);
@@ -17,12 +21,44 @@ function draw() {
   fill(0);
   textAlign(CENTER);
   text('Click to create a new sprite, move mouse to hit the wall', width/2, height/2);
+  fill(255);
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
   drawSprites();
   var leftWall = createSprite(0, 400, 20, 800);
   var rightWall = createSprite(795, 400, 10, 800);
   var topWall = createSprite(400, 0, 800, 20);
+    
+  //circles bounce against each others and against boxes
+  s.bounce(leftWall);
+  //boxes are "immovable"
+//  s.bounce(boxes);
+
+  //all sprites bounce at the screen edges
+  for(var i=0; i<allSprites.length; i++) {
+    var alls = allSprites[i];
+    if(alls.position.x<0) {
+      alls.position.x = 1;
+      alls.velocity.x = abs(alls.velocity.x);
+    }
+
+    if(s.position.x>width) {
+      alls.position.x = width-1;
+      alls.velocity.x = -abs(alls.velocity.x);
+    }
+
+    if(s.position.y<0) {
+      alls.position.y = 1;
+      alls.velocity.y = abs(alls.velocity.y);
+    }
+
+    if(s.position.y>height) {
+      alls.position.y = height-1;
+      alls.velocity.y = -abs(alls.velocity.y);
+    }
+  }
+
+  drawSprites();
 }
 
 function mousePressed() {
@@ -36,20 +72,5 @@ function mousePressed() {
   //e.g. a random velocity on the x and y coordinates
   s.velocity.x = random(-5, 5);
   s.velocity.y = random(-5, 5);
-}
-
-function bounceBall(){
-    if (s.x < 0){
-        s.velocity.x *= -5;
-    }
-    if (s.y < 0){
-        s.velocity.y *= -5;
-    }
-    if (s.x > width){
-        s.velocity.x *= -5;
-    }
-    if (s.y > height){
-        s.velocity.y *= -5;
-    }
 }
 
