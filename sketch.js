@@ -23,7 +23,7 @@ function draw() {
   var leftWall = createSprite(0, 400, 20, 800);
   var rightWall = createSprite(795, 400, 10, 800);
   var topWall = createSprite(0, 20, 800, 20);
-  var bottomWall = createSprite(400, 20, 800, 20)
+  var bottomWall = createSprite(400, 0, 800, 20)
 }
 
 function mousePressed() {
