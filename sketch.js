@@ -37,3 +37,19 @@ function mousePressed() {
   s.velocity.x = random(-5, 5);
   s.velocity.y = random(-5, 5);
 }
+
+function bounceBall(){
+    if (s.x < 0){
+        s.velocity.x *= -1;
+    }
+    if (s.y < 0){
+        s.velocity.y *= -1;
+    }
+    if (s.x > width){
+        s.velocity.x *= -1;
+    }
+    if (s.y > height){
+        s.velocity.y *= -1;
+    }
+}
+
