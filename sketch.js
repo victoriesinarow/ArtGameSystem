@@ -40,16 +40,16 @@ function mousePressed() {
 
 function bounceBall(){
     if (s.x < 0){
-        s.velocity.x *= -1;
+        s.velocity.x *= -5;
     }
     if (s.y < 0){
-        s.velocity.y *= -1;
+        s.velocity.y *= -5;
     }
     if (s.x > width){
-        s.velocity.x *= -1;
+        s.velocity.x *= -5;
     }
     if (s.y > height){
-        s.velocity.y *= -1;
+        s.velocity.y *= -5;
     }
 }
 
