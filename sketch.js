@@ -28,6 +28,39 @@ function draw() {
   var leftWall = createSprite(0, 400, 20, 800);
   var rightWall = createSprite(795, 400, 10, 800);
   var topWall = createSprite(400, 0, 800, 20);
+    
+    
+  //circles bounce against each others and against boxes
+  s.bounce(s);
+  //boxes are "immovable"
+  s.bounce(leftWall);
+
+  //all sprites bounce at the screen edges
+  for(var i=0; i<allSprites.length; i++) {
+    var alls = allSprites[i];
+    if(alls.position.x<0) {
+      alls.position.x = 1;
+      alls.velocity.x = abs(alls.velocity.x);
+    }
+
+    if(alls.position.x>width) {
+      alls.position.x = width-1;
+      alls.velocity.x = -abs(alls.velocity.x);
+    }
+
+    if(alls.position.y<0) {
+      alls.position.y = 1;
+      alls.velocity.y = abs(alls.velocity.y);
+    }
+
+    if(alls.position.y>height) {
+      alls.position.y = height-1;
+      alls.velocity.y = -abs(alls.velocity.y);
+    }
+  }
+
+  drawSprites();
+ 
 }
 
 function mousePressed() {
