@@ -20,7 +20,7 @@ function draw() {
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
   drawSprites();
-  var leftWall = createSprite(0, 400, 10, 800)
+  var leftWall = createSprite(0, 400, 20, 800)
 }
 
 function mousePressed() {
