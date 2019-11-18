@@ -56,14 +56,16 @@ function mousePressed() {
 
   //now you can use the variable to set properties
   //e.g. a random velocity on the x and y coordinates
+//  s.velocity.x = random(-5, 5);
+//  s.velocity.y = random(-5, 5);
   s.velocity.x = random(-5, 5);
   s.velocity.y = random(-5, 5);
 }
 
 //튕기기
 function bounce() {
-    if(s.position.x<leftWall) {
-      s.velocity.x = random(-5, 5);
+    if(s.position.x< 20) {
+      s.position.x =  ;
     }
 
     if(s.position.x>rightWall) {
