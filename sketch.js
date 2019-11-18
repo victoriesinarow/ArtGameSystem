@@ -24,8 +24,8 @@ function draw() {
   fill(255);
   textAlign(CENTER);
   text('pressure of walls', width/2, height/2);
-  
-  ellipse(mouseX, mouseY, 100, 100);
+    
+  drawSprite();
 }
 
 
