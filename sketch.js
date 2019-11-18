@@ -12,9 +12,9 @@ function setup() {
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor();
     
-  leftWall = createSprite(0, 400, 40, 800);
-  rightWall = createSprite(795, 400, 30, 800);
-  topWall = createSprite(400, 0, 800, 40);
+  leftWall = createSprite(0, 400, 60, 800);
+  rightWall = createSprite(795, 400, 50, 800);
+  topWall = createSprite(400, 0, 800, 60);
 
 }
 
