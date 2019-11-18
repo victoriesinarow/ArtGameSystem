@@ -9,6 +9,7 @@ let canvasHeight = 400;
 var leftWall;
 var rightWall;
 var topWall;
+var stretchy;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -18,11 +19,19 @@ function setup() {
   leftWall = createSprite(0, 400, 20, 800);
   rightWall = createSprite(795, 400, 10, 800);
   topWall = createSprite(400, 0, 800, 20);
+  stretchy = createSprite(mouseX, mouseY, 60, 60);
+
     
-//  things = createSprite(mouseX, mouseY, 30, 30);
-//  things.velocity.x = random(-5, 5);
-//  things.velocity.y = random(-5, 5);
-//  things.mouseIsPressed = true
+    stretchy.draw = function() {
+        fill( random, random, random);
+        
+        push();
+        rotate(radians(this.gerDirection()));
+        rect(0, 0, 100+this.getSpeed(), 100-this.getSpeed());
+        pop();
+    };
+    
+    stretchy.maxSpeed = 15;
 }
 
 
@@ -33,13 +42,11 @@ function draw() {
   fill(255);
   textAlign(CENTER);
   text('Click to create a new sprite, move mouse to hit the wall', width/2, height/2);
-//  fill(255);
-    
   
-    
-//    var leftWall = createSprite(0, 400, 20, 800);
-//    var rightWall = createSprite(795, 400, 10, 800);
-//    var topWall = createSprite(400, 0, 800, 20);
+  stretchy.velocity.x = (mouseX-stretchy.position.x)/15;
+  stretchy.velocity.y = (mouseX-stretchy.position.y)/15;
+//  fill(255);
+
     
   //draw all the sprites added to the sketch so far
   //the positions will be updated automatically at every cycle
@@ -62,24 +69,3 @@ function mousePressed() {
   s.velocity.y = random(-5, 5);
 }
 
-////튕기기
-//function bounce() {
-//    if(s.position.x< 20) {
-//      s.position.x =  ;
-//    }
-//
-//    if(s.position.x>rightWall) {
-//      s.position.x = width-1;
-//      s.velocity.x = -random(-5, 5);
-//    }
-//
-//    if(s.position.y<leftWall) {
-//      s.position.y = 1;
-//      s.velocity.y = random(-5, 5);
-//    }
-//
-//    if(s.position.y>height) {
-//      s.position.y = height-1;
-//      s.velocity.y = -random(-5, 5);
-//    }
-//}
