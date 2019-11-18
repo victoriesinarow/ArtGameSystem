@@ -9,7 +9,7 @@ let canvasHeight = 400;
 var leftWall;
 var rightWall;
 var topWall;
-var stretchy;
+//var stretchy;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -19,19 +19,19 @@ function setup() {
   leftWall = createSprite(0, 400, 20, 800);
   rightWall = createSprite(795, 400, 10, 800);
   topWall = createSprite(400, 0, 800, 20);
-  stretchy = createSprite(400, 200, 10, 10);
-
-    
-    stretchy.draw = function() {
-        fill(237, 205, 0);
-        
-        push();
-        rotate(radians(this.gerDirection()));
-        rect(0, 0, 100+this.getSpeed(), 100-this.getSpeed());
-        pop();
-    };
-    
-    stretchy.maxSpeed = 15;
+//  stretchy = createSprite(400, 200, 10, 10);
+//
+//
+//    stretchy.draw = function() {
+//        fill(237, 205, 0);
+//
+//        push();
+//        rotate(radians(this.gerDirection()));
+//        rect(0, 0, 100+this.getSpeed(), 100-this.getSpeed());
+//        pop();
+//    };
+//
+//    stretchy.maxSpeed = 15;
 }
 
 
