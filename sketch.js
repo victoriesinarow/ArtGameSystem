@@ -62,24 +62,24 @@ function mousePressed() {
   s.velocity.y = random(-5, 5);
 }
 
-//튕기기
-function bounce() {
-    if(s.position.x< 20) {
-      s.position.x =  ;
-    }
-
-    if(s.position.x>rightWall) {
-      s.position.x = width-1;
-      s.velocity.x = -random(-5, 5);
-    }
-
-    if(s.position.y<leftWall) {
-      s.position.y = 1;
-      s.velocity.y = random(-5, 5);
-    }
-
-    if(s.position.y>height) {
-      s.position.y = height-1;
-      s.velocity.y = -random(-5, 5);
-    }
-}
+////튕기기
+//function bounce() {
+//    if(s.position.x< 20) {
+//      s.position.x =  ;
+//    }
+//
+//    if(s.position.x>rightWall) {
+//      s.position.x = width-1;
+//      s.velocity.x = -random(-5, 5);
+//    }
+//
+//    if(s.position.y<leftWall) {
+//      s.position.y = 1;
+//      s.velocity.y = random(-5, 5);
+//    }
+//
+//    if(s.position.y>height) {
+//      s.position.y = height-1;
+//      s.velocity.y = -random(-5, 5);
+//    }
+//}
