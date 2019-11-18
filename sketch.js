@@ -19,11 +19,11 @@ function setup() {
   leftWall = createSprite(0, 400, 20, 800);
   rightWall = createSprite(795, 400, 10, 800);
   topWall = createSprite(400, 0, 800, 20);
-  stretchy = createSprite(400, 200, mouseX, mouseY);
+  stretchy = createSprite(400, 200, 10, 10);
 
     
     stretchy.draw = function() {
-        fill( random, random, random);
+        fill(237, 205, 0);
         
         push();
         rotate(radians(this.gerDirection()));
