@@ -25,7 +25,7 @@ function draw() {
   textAlign(CENTER);
   text('pressure of walls', width/2, height/2);
     
-  drawSprite();
+  drawSprites();
 }
 
 
