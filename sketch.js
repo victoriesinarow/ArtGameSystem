@@ -43,8 +43,8 @@ function draw() {
   textAlign(CENTER);
   text('Click to create a new sprite, move mouse to hit the wall', width/2, height/2);
   
-  stretchy.velocity.x = (mouseX-stretchy.position.x)/15;
-  stretchy.velocity.y = (mouseX-stretchy.position.y)/15;
+//  stretchy.velocity.x = (mouseX-stretchy.position.x)/15;
+//  stretchy.velocity.y = (mouseX-stretchy.position.y)/15;
 //  fill(255);
 
     
