@@ -57,7 +57,7 @@ function draw() {
 function mousePressed() {
 
   //create a sprite at the mouse position and store it in a temporary variable
-  var s = createSprite(mouseX, mouseY, random(), random());
+  var s = createSprite(mouseX, mouseY, 30, 30);
   //if no image or animation is associated it will be a rectancle of the specified size
   //and a random color
 
