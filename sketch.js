@@ -60,7 +60,7 @@ function resetGame() {
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
                       
-  bug1 = createSprite(190, 190, 20, 20);
+  bug1 = createSprite(width/2, height+20, 20, 20);
   
   car1.setVelocity(random(3, 10), 0);
 }
