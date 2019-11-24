@@ -1,6 +1,16 @@
 let canvas;
 let canvasWidth = 600;
 let canvasHeight = 400;
+let frog;
+let car1;
+let sound_hit;
+let sound_up;
+let bug1;
+
+
+function preload() {
+    sound_hit = loadSound('hit.wav');
+    sound_up = loadSound('Powerup.wav');
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -49,8 +59,8 @@ function resetGame() {
   frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
-    
-  bug1 = createSprite(random, random, 20, 20);
+                      
+  bug1 = createSprite(random(width)), random(height)), 20, 20);
   
   car1.setVelocity(random(3, 10), 0);
 }
@@ -82,4 +92,8 @@ function nextLevel() {
 
 function playHitSound() {
   sound_hit.play();
+}
+
+function playUpSound() {
+  sound_up.play();
 }
