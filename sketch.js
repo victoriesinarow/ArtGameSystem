@@ -22,14 +22,19 @@ function draw() {
 
   
   if (frog.bounce(car1)) {
-    sound_hit.play();
+    assets_hit.play();
   }
   
   // 충돌 시 사운드 효과에 대한 또 다른 방법
   // frog.collide(car1, playHitSound);
   // frog.bounce(car1);
   
-  
+  if (frog.bounce(bug1)) {
+    assets_Powerup.play();
+    frog.scale = 2;
+  }
+      
+      
   if (frog.overlap(goal)) {
     nextLevel();
   }
@@ -44,6 +49,8 @@ function resetGame() {
   frog = createSprite(width/2, height-30, 20, 40);
   goal = createSprite(width/2, 0, width, 4);
   car1 = createSprite(0, height/2, 60, 30);
+    
+  bug1 = createSprite(random, random, 20, 20);
   
   car1.setVelocity(random(3, 10), 0);
 }
