@@ -6,6 +6,10 @@ let car1;
 //let sound_hit;
 //let sound_powerup;
 let bug1;
+let bug2;
+let bug3;
+let bug4;
+let bug5;
 
 
 //function preload() {
@@ -60,7 +64,11 @@ function resetGame() {
   goal = createSprite(canvasWidth/2, 0, canvasWidth, 4);
   car1 = createSprite(0, canvasHeight/2, 60, 30);
                       
-  bug1 = createSprite(canvasWidth/2, canvasHeight/2, 20, 20);
+  bug1 = createSprite(random(canvasWidth), random(canvasHeight), 20, 20);
+  bug2 = createSprite(random(canvasWidth), random(canvasHeight), 20, 20);
+  bug3 = createSprite(random(canvasWidth), random(canvasHeight), 20, 20);
+  bug4 = createSprite(random(canvasWidth), random(canvasHeight), 20, 20);
+  bug5 = createSprite(random(canvasWidth), random(canvasHeight), 20, 20);
   
   car1.setVelocity(random(3, 10), 0);
 }
