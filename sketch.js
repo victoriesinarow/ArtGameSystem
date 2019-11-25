@@ -3,14 +3,14 @@ let canvasWidth = 600;
 let canvasHeight = 400;
 let frog;
 let car1;
-let sound_hit;
-let sound_powerup;
+//let sound_hit;
+//let sound_powerup;
 let bug1;
 
 
-function preload() {
-    assets/sound_hit = loadSound('hit.wav');
-    assets/sound_up = loadSound('powerup.wav');
+//function preload() {
+//    assets/sound_hit = loadSound('hit.wav');
+//    assets/sound_up = loadSound('powerup.wav');
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -32,7 +32,7 @@ function draw() {
 
   
   if (frog.bounce(car1)) {
-    assets_hit.play();
+//    assets_hit.play();
   }
   
   // 충돌 시 사운드 효과에 대한 또 다른 방법
@@ -40,7 +40,7 @@ function draw() {
   // frog.bounce(car1);
   
   if (frog.bounce(bug1)) {
-    assets_powerup.play();
+//    assets_powerup.play();
     frog.scale = 2;
   }
       
@@ -90,10 +90,10 @@ function nextLevel() {
 }
 
 
-function playHitSound() {
-  sound_hit.play();
-}
-
-function playPowerupSound() {
-  sound_powerup.play();
-}
+//function playHitSound() {
+//  sound_hit.play();
+//}
+//
+//function playPowerupSound() {
+//  sound_powerup.play();
+//}
