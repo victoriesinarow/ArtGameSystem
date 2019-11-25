@@ -43,7 +43,7 @@ function draw() {
   // frog.collide(car1, playHitSound);
   // frog.bounce(car1);
   
-  if (frog.bounce(bug1)) {
+  if (frog.bounce(bug1,bug2,bug3,bug4,bug5)) {
 //    assets_powerup.play();
     frog.scale = 2;
   }
