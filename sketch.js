@@ -68,13 +68,13 @@ function resetGame() {
 
 function keyPressed() {
   if (keyCode == UP_ARROW) {
-    frog.position.y -= 10;
+    frog.position.y -= 14;
   }
 }
 
 
 function checkGameOver() {   //차가 튕겨져 나가기
-  if (car1.position.y > 30 ) { //||  <= car1.position.y) {
+  if (frog.position.x <= 0 || width <= frog.position.x) {
     fill(255, 0, 0);
     textSize(60);
     textAlign(CENTER);
