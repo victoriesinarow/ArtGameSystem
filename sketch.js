@@ -74,7 +74,7 @@ function keyPressed() {
 
 
 function checkGameOver() {   //차가 튕겨져 나가기
-  if (car1.position.y >= 0 ) { //||  <= car1.position.y) {
+  if (car1.position.y >= 5 ) { //||  <= car1.position.y) {
     fill(255, 0, 0);
     textSize(60);
     textAlign(CENTER);
