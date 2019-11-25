@@ -31,7 +31,7 @@ function draw() {
   
 
   
-  if (frog.bounce(car1)) {
+  if (car1.bounce(frog)) {   //개구리가 차를 쳤을 때
 //    assets_hit.play();
   }
   
