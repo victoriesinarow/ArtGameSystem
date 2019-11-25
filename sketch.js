@@ -56,11 +56,11 @@ function draw() {
 
 
 function resetGame() {
-  frog = createSprite(width/2, height-30, 20, 40);
-  goal = createSprite(width/2, 0, width, 4);
-  car1 = createSprite(0, height/2, 60, 30);
+  frog = createSprite(canvasWidth/2, canvasHeight-30, 20, 40);
+  goal = createSprite(canvasWidth/2, 0, canvasWidth, 4);
+  car1 = createSprite(0, canvasHeight/2, 60, 30);
                       
-  bug1 = createSprite(width/2, height-30, 20, 20);
+  bug1 = createSprite(canvasWidth/2, canvasHeight/2, 20, 20);
   
   car1.setVelocity(random(3, 10), 0);
 }
@@ -68,7 +68,13 @@ function resetGame() {
 
 function keyPressed() {
   if (keyCode == UP_ARROW) {
-    frog.position.y -= 14;
+    frog.position.y -= 10;
+  }
+  if (keyCode == RIGHT_ARROW) {
+    frog.position.x += 10;
+  }
+  if (keyCode == LEFT_ARROW) {
+    frog.position.x -= 10;
   }
 }
 
