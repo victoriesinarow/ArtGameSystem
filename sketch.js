@@ -1,6 +1,8 @@
 let canvas;
-let canvasWidth = 600;
+let canvasWidth = 400;
 let canvasHeight = 400;
+var sad;
+
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -10,5 +12,8 @@ function setup() {
 
 function draw() {
   background(30);
-  rect(mouseX, mouseY, 100, 100);
+  
+    
+  sad = createSprite(random(canvasWidth),random(canvasHeight),80,80);
+  drawSprites();
 }
