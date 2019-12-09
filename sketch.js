@@ -28,12 +28,18 @@
 //}
 
 
+let canvas;
+let canvasWidth = 400;
+let canvadHight = 400;
 let grid;
 let grid_new;
 let score = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  cavas = createCanvas(canvasWidth, canvasHeight);
+  canvas.position(windowWidth/2 - canvasWidth/2, 20);
+  noCursor();
+    
   noLoop();
   grid = blankGrid();
   grid_new = blankGrid();
