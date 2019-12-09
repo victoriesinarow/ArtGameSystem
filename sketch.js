@@ -30,7 +30,7 @@
 
 let canvas;
 let canvasWidth = 400;
-let canvadHight = 400;
+let canvadHeight = 400;
 let grid;
 let grid_new;
 let score = 0;
