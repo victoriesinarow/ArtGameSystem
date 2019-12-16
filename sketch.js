@@ -13,14 +13,12 @@ function setup() {
 function draw() {
   background(30);
     
-  sad = createSprite(width/2, height-30, 20, 40);
+  sad = fill (255, 0, 0);
+  sad = createSprite(width-360, height-40, 80, 80);
+
   drawSprites();
 }
 
-function sad() {
-    fill(#F5A9A9);
-    rect(random)
-}
 
 
 //let canvas;
