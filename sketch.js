@@ -2,12 +2,13 @@ let canvas;
 let canvasWidth = 400;
 let canvasHeight = 400;
 var sad;
-
+var unsad;
+var emotions;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
-  noCursor();
+    
 }
 
 function draw() {
@@ -15,8 +16,24 @@ function draw() {
     
   sad = fill (255, 0, 0);
   sad = createSprite(width-360, height-40, 80, 80);
+  sad.shapeColor = color(170, 0, 50);
 
+  
+
+//  unsad = createSprite(width-40, height-40, 80, 80);
+  unsad = createSprite(mouseX, mouseY, 80, 80);
+  unsad.shapeColor = color(0, 100, 200);
+  unsad.velocity.x = (mouseX-unsad.position.x)/10;
+  unsad.velocity.y = (mouseY-unsad.position.y)/10;
+    
+    
+  emotions = createSprite(width/2, height/2, 80, 80);
+  emotions.shapeColor = color(0, 200, 50);
+  emotions.velocity.x = random(-1, 1);
+  emotions.velocity.y = random(-1, 1);
   drawSprites();
+    
+ 
 }
 
 
