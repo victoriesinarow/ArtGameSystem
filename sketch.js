@@ -3,7 +3,7 @@ let canvasWidth = 400;
 let canvasHeight = 400;
 var sad;
 var unsad;
-var emotions;
+var collectibles;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -14,11 +14,12 @@ function setup() {
   unsad.shapeColor = color(0, 100, 200);
 
 
-//create 2 groups
-  emotions = new Group();
-    for(var i=0; i<15; i++) {
+//create groups
+  collectibles = new Group();
+    {
       var dot = createSprite(width/2, height/2, 80, 80);
-      emotions.add(dot);
+      dot.shapeColor = color(0, 200, 50);
+      collectibles.add(dot);
     }
 }
 
@@ -37,11 +38,11 @@ function draw() {
   unsad.velocity.x = (mouseX-unsad.position.x)/10;
   unsad.velocity.y = (mouseY-unsad.position.y)/10;
   
-  unsad.overlap(emotions, collect);
+  unsad.overlap(collectibles, collect);
     
     
 //  emotions = createSprite(width/2, height/2, 80, 80);
-  emotions.shapeColor = color(0, 200, 50);
+//  collectibles.shapeColor = color(0, 200, 50);
 //  emotions.velocity.x = random(-1, 1);
 //  emotions.velocity.y = random(-1, 1);
   drawSprites();
