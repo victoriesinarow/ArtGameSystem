@@ -8,7 +8,18 @@ var emotions;
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
+   
     
+  unsad = createSprite(80, 80);
+  unsad.shapeColor = color(0, 100, 200);
+
+
+//create 2 groups
+  emotions = new Group();
+    for(var i=0; i<15; i++) {
+      var dot = createSprite(width/2, height/2, 80, 80);
+      emotions.add(dot);
+    }
 }
 
 function draw() {
@@ -21,21 +32,28 @@ function draw() {
   
 
 //  unsad = createSprite(width-40, height-40, 80, 80);
-  unsad = createSprite(mouseX, mouseY, 80, 80);
-  unsad.shapeColor = color(0, 100, 200);
+//  unsad = createSprite(mouseX, mouseY, 80, 80);
+//  unsad.shapeColor = color(0, 100, 200);
   unsad.velocity.x = (mouseX-unsad.position.x)/10;
   unsad.velocity.y = (mouseY-unsad.position.y)/10;
+  
+  unsad.overlap(emotions, collect);
     
     
-  emotions = createSprite(width/2, height/2, 80, 80);
+//  emotions = createSprite(width/2, height/2, 80, 80);
   emotions.shapeColor = color(0, 200, 50);
-  emotions.velocity.x = random(-1, 1);
-  emotions.velocity.y = random(-1, 1);
+//  emotions.velocity.x = random(-1, 1);
+//  emotions.velocity.y = random(-1, 1);
   drawSprites();
     
  
 }
 
+
+function collect(collector, colllected) {
+//collector = unsad
+  collected.remove();
+}
 
 
 //let canvas;
