@@ -30,13 +30,13 @@
 
 let canvas;
 let canvasWidth = 400;
-let canvadHeight = 400;
+let canvasHeight = 400;
 let grid;
 let grid_new;
 let score = 0;
 
 function setup() {
-  cavas = createCanvas(canvasWidth, canvasHeight);
+  canvas = createCanvas(canvasWidth, canvasHeight);
   canvas.position(windowWidth/2 - canvasWidth/2, 20);
   noCursor();
     
